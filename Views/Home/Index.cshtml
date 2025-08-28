@@ -37,7 +37,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
      
-      if (!localStorage.getItem("welcomeShown")) {  // Check if we've already shown the modal before
+      if (!sessionStorage.getItem("welcomeShown")) {  // Check if we've already shown the modal before
 
         
         let myModal = new bootstrap.Modal(document.getElementById('welcomeModal')); // Create the Bootstrap modal for #welcomeModal
@@ -45,8 +45,8 @@
         // Show the modal
         myModal.show();
 
-        // Set a flag in localStorage so it won’t show again
-        localStorage.setItem("welcomeShown", "true");
+        // Set a flag in session Storage instead of local storage so it appears every session 
+        sessionStorage.setItem("welcomeShown", "true");
       }
     });
 </script>
