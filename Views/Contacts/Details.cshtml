@@ -1,0 +1,54 @@
+﻿@model WebApplication1.Models.Contact
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Contact Details</h1>
+<hr />
+
+<div class="col-md-6 col-lg-5 mb-2 deleteCard">
+    <div class="card text-dark shadow border-0">
+        <img src="~/img/KJS (1).png" class="card-img-top p-3" alt="KJS logo" style="object-fit:contain; height:250px;" />
+
+        <div class="card-body text-center">
+            <h4 class="card-title mb-0">@Model.FirstName @Model.LastName</h4>
+            <hr />
+        </div>
+
+        <ul class="list-group list-group-flush">
+
+            <li class="list-group-item d-flex justify-content-between">
+                <span>Title</span>
+                <span>@Model.Title</span>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between">
+                <span>Department</span>
+                <span>@Model.Department</span>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between">
+                <span>Direct Dial</span>
+                <span>@Model.DirectDial</span>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between">
+                <span>Extension</span>
+                <span>@Model.Extension</span>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between">
+                <span>Room Number</span>
+                <span>@Model.RoomNumber</span>
+            </li>
+        </ul>
+
+        <div class="card-body d-flex justify-content-start">
+            <form asp-action="Delete" method="post" class="m-0">
+                <input type="hidden" asp-for="Id" />
+               <a asp-action="Index" class="btn btn-primary">Back to List</a>
+            </form>
+        </div>
+    </div>
+</div>

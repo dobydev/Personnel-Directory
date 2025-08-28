@@ -1,0 +1,98 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  
+}
+
+body {
+    margin-bottom: 60px;
+    background: linear-gradient(190deg, #6c7c8f, #142F4E);
+    background-attachment: fixed;
+    background-size: cover;
+    color: #212529;
+    font-family: Inter, sans-serif;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+/*tab navigation*/
+.login-logout-card .card-header {
+    padding: 0px 0px 12px 0px;
+    background-color: #FAF9F6;
+}
+
+.login-logout-card ul.nav-tabs {
+    margin: 0px 0px -12px 0px;
+    background-color: #FAF9F6;
+}
+
+.login-logout-card li.nav-item {
+    width: 50%;
+    background-color: #FAF9F6;
+}
+
+.login-logout-card a.nav-link {
+    font-size: 1rem;
+    color: #495057;
+    text-align: center;
+    padding: 1rem;
+    background-color: #FAF9F6;
+}
+
+.login-logout-card .card-body {
+    padding: 10px 20px;
+    background-color: #FAF9F6;
+}
+
+.bgRow {
+    background-color: #FAF9F6;
+}
+
+/* Card background */
+.deleteCard .card {
+    background-color: #FAF9F6; 
+    color: #fff;
+}
+
+/* List items inside the delete card */
+.deleteCard .list-group-item {
+    background-color: inherit;
+    color: inherit; 
+}
+
+h1, .navbar, .navbar-brand, .footer, h5, .logout , .reg , .log{
+    color: #FAF9F6;
+}
+
+.directory-table {
+    --bs-table-bg: rgba(255,255,255,0.06);
+    --bs-table-striped-bg: rgba(255,255,255,0.10);
+    --bs-table-striped-color: #e9eef5;
+    --bs-table-hover-bg: rgba(255,255,255,0.14);
+    --bs-table-color: #e9eef5;
+    --bs-table-border-color: rgba(255,255,255,0.15);
+    backdrop-filter: blur(2px); /* optional glassy vibe */
+    border-radius: .5rem; /* optional */
+    overflow: hidden; /* keep rounded corners */
+}
