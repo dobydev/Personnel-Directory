@@ -80,19 +80,7 @@ body {
     background-color: inherit;
     color: inherit; 
 }
-
+/* Went with this so it was not just #FFFFF*/
 h1, .navbar, .navbar-brand, .footer, h5, .logout , .reg , .log{
     color: #FAF9F6;
-}
-
-.directory-table {
-    --bs-table-bg: rgba(255,255,255,0.06);
-    --bs-table-striped-bg: rgba(255,255,255,0.10);
-    --bs-table-striped-color: #e9eef5;
-    --bs-table-hover-bg: rgba(255,255,255,0.14);
-    --bs-table-color: #e9eef5;
-    --bs-table-border-color: rgba(255,255,255,0.15);
-    backdrop-filter: blur(2px); /* optional glassy vibe */
-    border-radius: .5rem; /* optional */
-    overflow: hidden; /* keep rounded corners */
 }

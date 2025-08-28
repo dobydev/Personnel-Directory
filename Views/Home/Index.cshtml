@@ -7,11 +7,46 @@
         Personnel Directory Web Application
     </h1>
 
-    <h5>
-        Instant access to the numbers you need, when you need them.
-    </h5>
+    <h5 id="tagline" class="mt-2"></h5>
   
    
     <img src="~/img/KJS (1).png" class="img-fluid p-0  mb-3 mt-0" alt="KJS Logo" />
 </div>
 
+<!--Welcome modal with instructions to navigate the site-->
+<div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="welcomeModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                👋 Welcome to the KJS Personnel Directory Application!
+                Navigate to the <strong>Contacts</strong> tab ⬆️ to get started.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Simple JS to give some life to the page-->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+     
+      if (!localStorage.getItem("welcomeShown")) {  // Check if we've already shown the modal before
+
+        
+        let myModal = new bootstrap.Modal(document.getElementById('welcomeModal')); // Create the Bootstrap modal for #welcomeModal
+
+        // Show the modal
+        myModal.show();
+
+        // Set a flag in localStorage so it won’t show again
+        localStorage.setItem("welcomeShown", "true");
+      }
+    });
+</script>
