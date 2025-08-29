@@ -29,7 +29,8 @@
             <th>@Html.DisplayNameFor(m => m.First().LastName)</th>
             <th>@Html.DisplayNameFor(m => m.First().Title)</th>
             <th>@Html.DisplayNameFor(m => m.First().Extension)</th>
-            <th></th>
+            <th>@Html.DisplayNameFor(m => m.First().Email)</th>
+            <th>Actions</th> <!--Added header-->
         </tr>
     </thead>
     <tbody>
@@ -41,6 +42,7 @@
                 <td>@item.LastName</td>
                 <td>@item.Title</td>
                 <td>@item.Extension</td>
+                <td>@item.Email</td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                     <a asp-action="Details" asp-route-id="@item.Id">Details</a> |

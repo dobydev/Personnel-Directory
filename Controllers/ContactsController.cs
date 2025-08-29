@@ -47,7 +47,8 @@ namespace WebApplication1.Controllers
                     (c.Title != null && EF.Functions.Like(c.Title, p)) ||
                     (c.DirectDial != null && EF.Functions.Like(c.DirectDial, p)) ||
                     (c.Extension != null && EF.Functions.Like(c.Extension, p)) ||
-                    (c.RoomNumber != null && EF.Functions.Like(c.RoomNumber, p))
+                    (c.RoomNumber != null && EF.Functions.Like(c.RoomNumber, p)) ||
+                    (c.Email != null && EF.Functions.Like(c.Email, p))
                 );
             }
 
@@ -86,10 +87,9 @@ namespace WebApplication1.Controllers
 
         // POST: Contacts/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Department,FirstName,LastName,Title,DirectDial,Extension,RoomNumber")] Contact contact)
+        public async Task<IActionResult> Create([Bind("Id,Department,FirstName,LastName,Title,DirectDial,Extension,RoomNumber,Email")] Contact contact)
         {
             if (ModelState.IsValid)
             {
@@ -118,10 +118,9 @@ namespace WebApplication1.Controllers
 
         // POST: Contacts/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Department,FirstName,LastName,Title,DirectDial,Extension,RoomNumber")] Contact contact)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Department,FirstName,LastName,Title,DirectDial,Extension,RoomNumber,Email")] Contact contact)
         {
             if (id != contact.Id)
             {

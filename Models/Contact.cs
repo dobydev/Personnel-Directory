@@ -18,6 +18,9 @@ namespace WebApplication1.Models
         public string? Extension { get; set; }
         [Display(Name = "Room Number")]
         public string? RoomNumber { get; set; }
+        // Added for more convenience to end users
+        [Display(Name = "Email")]
+        public string? Email {  get; set; }
 
         public Contact()
         {
